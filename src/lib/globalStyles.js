@@ -16,13 +16,13 @@ const GlobalStyle = createGlobalStyle`
 
   /* Set core root defaults */
   :root {
-    --primary-color: #0077cc;
+    --primary-color: #642579;
   }
 
   /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-  ul[role='list'], ol[role='list'] {
+  /* ul[role='list'], ol[role='list'] {
     list-style: none;
-  }
+  } */
 
   /* Set core body defaults */
   body {
@@ -30,13 +30,13 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
     min-height: 100vh;
-    color: #333;
+    /* color: #333; */
   }
 
   /* Remove text decoration from anchor elements */
   a {
     text-decoration: none;
-    color: inherit;
+    /* color: inherit; */
   }
 
   /* Inherit fonts for inputs and buttons */

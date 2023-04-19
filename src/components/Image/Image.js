@@ -1,6 +1,6 @@
 // components/ExtendedImage.js
 import React from 'react';
-import Image from 'next/image';
+import NextImage from 'next/image';
 
 const Image = ({
   src,
@@ -21,7 +21,7 @@ const Image = ({
   const altText = alt || defaultAltText;
 
   return (
-    <Image
+    <NextImage
       src={src}
       alt={altText}
       width={width}

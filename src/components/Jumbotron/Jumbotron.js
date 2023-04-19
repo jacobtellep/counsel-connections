@@ -1,5 +1,5 @@
 import { JumbotronWrapper, Overlay, Heading } from './Jumbotron.styled';
-import Image from '../Image';
+import Image from '@/components/Image';
 
 const Jumbotron = ({ imageUrl, imageAlt, headingText }) => {
   return (

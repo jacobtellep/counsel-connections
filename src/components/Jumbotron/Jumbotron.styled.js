@@ -11,7 +11,7 @@ const JumbotronWrapper = styled.div`
 `;
 
 const Overlay = styled.div`
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   height: 100%;
   left: 0;
   position: absolute;
@@ -27,6 +27,10 @@ const Heading = styled.h1`
   font-size: 3.6rem;
   max-width: 500px;
   position: relative;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.medium}) {
+    font-size: 2.2rem;
+  }
 `;
 
 export { JumbotronWrapper, Overlay, Heading };

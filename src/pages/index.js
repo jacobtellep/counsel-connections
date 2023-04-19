@@ -13,18 +13,16 @@ const Home = () => {
         headingText: 'Welcome to Counsel Connections',
         imageUrl: '/assets/placeholder.jpg',
       },
+      contentBlock: {
+        headingText: "What We've Been Up To",
+        content:
+          "Springing into action: A look at our recent achievements and upcoming initiatives",
+      },
     },
   };
   return (
     <Layout {...props}>
-      <Homepage
-        {...{
-          jumbotron: {
-            headingText: 'Welcome to Counsel Connections',
-            imageUrl: '/assets/placeholder.jpg',
-          },
-        }}
-      />
+      <Homepage {...props.homepage} />
     </Layout>
   );
 };

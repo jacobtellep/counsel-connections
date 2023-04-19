@@ -12,8 +12,8 @@ import HorizontalLine from '@/components/HorizontalLine';
 import Image from '@/components/Image';
 import PrimaryLine from '@/components/PrimaryLine';
 
-const TimelineItem = ({ date, eventGuests, id }) => {
-const mirror = id % 2 === 0;
+const TimelineItem = ({ date, eventGuests, id, image }) => {
+  const mirror = id % 2 === 0;
 
   return (
     <Container>
@@ -32,11 +32,11 @@ const mirror = id % 2 === 0;
             </GuestContainer>
           ))}
         </DescriptionContainer>
-        <ImageContainer>
+        <ImageContainer height={image.height} width={image.width}>
           <Image
             blurDataURL='/assets/feb-23-event.jpeg?w=10&h=10'
             src='/assets/feb-23-event.jpeg'
-            height={640}
+            height={(image.height / image.width) * 854}
             width={854}
           />
         </ImageContainer>

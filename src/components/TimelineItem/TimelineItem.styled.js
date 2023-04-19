@@ -55,10 +55,9 @@ const ImageDescriptionContainer = styled.div`
   width: 100%;
 `;
 
-// TODO: need to make height dynamic here since width is constant
 const ImageContainer = styled.div`
+  aspect-ratio: ${(props) => props.width / props.height};
   border-radius: 20px;
-  height: 640px;
   max-width: 854px;
   position: relative;
   width: 100%;

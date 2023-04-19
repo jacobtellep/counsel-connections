@@ -8,7 +8,6 @@ const Container = styled.div`
 `;
 
 const Timeline = styled.div`
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   max-width: ${(props) => props.theme.breakpoints.xLarge};

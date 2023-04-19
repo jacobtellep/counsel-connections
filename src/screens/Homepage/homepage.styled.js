@@ -10,7 +10,6 @@ const Container = styled.div`
 const Timeline = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: ${(props) => props.theme.breakpoints.xLarge};
   width: 100%;
 `;
 

@@ -8,11 +8,11 @@ const Homepage = (props) => {
     <Container>
       <Jumbotron {...props.jumbotron} />
       <ContentBlock {...props.contentBlock} />
-      <Timeline>
-        {props.timelineItems.map((item, index) => (
-          <TimelineItem key={index} {...item} />
-        ))}
-      </Timeline>
+        <Timeline>
+          {props.timelineItems.map((item, index) => (
+            <TimelineItem key={index} {...item} />
+          ))}
+        </Timeline>
     </Container>
   );
 };

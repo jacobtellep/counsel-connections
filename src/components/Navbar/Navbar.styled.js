@@ -23,7 +23,7 @@ const NavBrand = styled.a`
   padding: 0.5rem 0.5rem;
   text-decoration: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     font-size: 1rem;
     max-width: 200px;
   }
@@ -37,7 +37,7 @@ const NavMenu = styled.ul`
   list-style: none;
   padding: 0.5rem 0.5rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     /* align-items: center; */
     background-color: ${(props) => props.theme.colors.white};
     display: ${(props) => (props.open ? 'flex' : 'none')};
@@ -72,7 +72,7 @@ const NavItem = styled.li`
     top: 0;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     /* hide the vertical lines on mobile screens */
     &:not(:last-child)::after {
       display: none;
@@ -101,7 +101,7 @@ const HamburgerMenu = styled.div`
   top: 1rem;
   z-index: 10000;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     display: ${(props) => (props.open ? 'none' : 'block')};
   }
 `;
@@ -116,7 +116,7 @@ const CloseButton = styled.div`
   top: 1rem;
   z-index: 10000;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     display: block;
     z-index: 9999;
   }

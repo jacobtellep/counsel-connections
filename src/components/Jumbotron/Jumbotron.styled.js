@@ -27,6 +27,7 @@ const Heading = styled.h1`
   font-size: 3.6rem;
   max-width: 500px;
   position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
   @media (max-width: ${(props) => props.theme.breakpoints.medium}) {
     font-size: 2.2rem;

@@ -1,10 +1,10 @@
 import { Container } from './homepage.styled';
 import Jumbotron from '@/components/Jumbotron';
 
-const Homepage = () => {
+const Homepage = (props) => {
   return (
     <Container>
-      <Jumbotron />
+      <Jumbotron {...props.jumbotron} />
     </Container>
   );
 };

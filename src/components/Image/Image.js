@@ -20,6 +20,7 @@ const Image = ({
   // Use the provided alt text or fallback to the default
   const altText = alt || defaultAltText;
 
+  // TODO: need to look at docs and use style prop instead of objectFit and objectPosition
   return (
     <NextImage
       src={src}

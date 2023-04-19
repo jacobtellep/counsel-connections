@@ -5,7 +5,8 @@ export default {
   homepage: {
     jumbotron: {
       headingText: 'Welcome to Counsel Connections',
-      imageUrl: '/assets/placeholder.jpg',
+      imageUrl: '/assets/huntington-live-on-the-levy.jpg',
+      imageAlt: 'Huntington and Live on the Levy',
     },
     contentBlock: {
       headingText: "What We've Been Up To",

@@ -1,12 +1,11 @@
-import TestSecondaryFont from '@/components/TestSecondaryFont';
 import { Container } from './homepage.styled';
+import Jumbotron from '@/components/Jumbotron';
 
-const Homepage = () => {
+const Homepage = (props) => {
   return (
-    <>
-      {/* <Container>Hello World</Container>
-      <TestSecondaryFont>Secondary Hello World</TestSecondaryFont> */}
-    </>
+    <Container>
+      <Jumbotron {...props.jumbotron} />
+    </Container>
   );
 };
 

@@ -1,6 +1,6 @@
 // components/ExtendedImage.js
 import React from 'react';
-import NextImage from 'next/image';
+import NextImage from 'next/legacy/image';
 
 const Image = ({
   src,
@@ -20,6 +20,7 @@ const Image = ({
   // Use the provided alt text or fallback to the default
   const altText = alt || defaultAltText;
 
+  // TODO: need to look at docs and use style prop instead of objectFit and objectPosition
   return (
     <NextImage
       src={src}

@@ -2,7 +2,6 @@ import { JumbotronWrapper, Overlay, Heading } from './Jumbotron.styled';
 import Image from '../Image';
 
 const Jumbotron = ({ imageUrl, imageAlt, headingText }) => {
-  console.log('Jumbotron imageUrl', imageUrl);
   return (
     <JumbotronWrapper>
       <Image

@@ -7,7 +7,7 @@ const Container = styled.div`
   flex-direction: column;
   height: 100vh;
   justify-content: center;
-  max-height: 400px;
+  max-height: 300px;
   width: 100%;
 `;
 

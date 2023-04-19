@@ -1,7 +1,7 @@
 import Line from './PrimaryLine.styled';
 
-const Timeline = ({ isShort = false }) => {
+const PrimaryLine = ({ isShort = false }) => {
   return <Line short={isShort} />;
 };
 
-export default Timeline;
+export default PrimaryLine;

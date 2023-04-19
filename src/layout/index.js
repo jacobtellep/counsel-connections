@@ -1,5 +1,7 @@
 import Head from 'next/head';
 
+import Navbar from '@/components/Navbar';
+
 function Layout({ children, pageTitle, pageDescription, ogImageUrl }) {
   return (
     <div>
@@ -10,6 +12,7 @@ function Layout({ children, pageTitle, pageDescription, ogImageUrl }) {
         <meta property="og:description" content={pageDescription} />
         <meta property="og:image" content={ogImageUrl} />
       </Head>
+      <Navbar />
       <main>{children}</main>
     </div>
   );

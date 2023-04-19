@@ -4,8 +4,8 @@ import { Container } from './homepage.styled';
 const Homepage = () => {
   return (
     <>
-      <Container>Hello World</Container>
-      <TestSecondaryFont>Secondary Hello World</TestSecondaryFont>
+      {/* <Container>Hello World</Container>
+      <TestSecondaryFont>Secondary Hello World</TestSecondaryFont> */}
     </>
   );
 };

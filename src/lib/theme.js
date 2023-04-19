@@ -27,17 +27,17 @@ const theme = {
     grayHover: '#d5d3cf',
     grayLight: rgba('#4a4948', 0.5),
     grayLighter: rgba('#ebe9e4', 0.5),
+    primary: '#4A0A5F',
+    primaryLight: '#642579',
     white: '#ffffff',
     white80: 'rgba(255, 255, 255, 0.8)',
     whiteDisabled: 'rgba(255, 255, 255, 0.75)',
     whiteLight: rgba('#ffffff', 0.75),
   },
-
   fontFamilies: {
-    base: "'Inter', sans-serif",
-    secondary: "'Playfair Display', serif"
+    base: '"Lexend", sans-serif',
+    secondary: '"Karma", serif',
   },
-
   fontSizes: {
     base: '16px',
     baseSmall: '14px',

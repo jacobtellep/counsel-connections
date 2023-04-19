@@ -33,6 +33,7 @@ const NavBrand = styled.a`
 
 const NavMenu = styled.ul`
   display: flex;
+  font-size: 1.2rem;
   list-style: none;
   padding: 0.5rem 0.5rem;
 

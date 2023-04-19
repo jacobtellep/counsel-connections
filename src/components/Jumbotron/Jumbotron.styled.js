@@ -27,6 +27,10 @@ const Heading = styled.h1`
   font-size: 3.6rem;
   max-width: 500px;
   position: relative;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.medium}) {
+    font-size: 2.8rem;
+  }
 `;
 
 export { JumbotronWrapper, Overlay, Heading };

@@ -19,9 +19,13 @@ const Content = styled.p`
   text-align: center;
 `;
 
+// TODO: heading needs to be centered.
 const Heading = styled.h1`
+  align-items: center;
   color: ${(props) => props.theme.colors.white};
+  display: flex;
   font-size: 2.8rem;
+  justify-content: center;
 `;
 
 export { Container, Content, Heading };

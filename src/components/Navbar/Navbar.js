@@ -4,12 +4,12 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import {
   CloseButton,
+  HamburgerMenu,
   NavbarContainer,
   NavBrand,
-  NavMenu,
   NavItem,
   NavLink,
-  HamburgerMenu,
+  NavMenu,
 } from './Navbar.styled';
 import theme from '@/lib/theme';
 import Image from '@/components/Image';
@@ -39,8 +39,8 @@ const Navbar = () => {
         <FontAwesomeIcon icon={faBars} color={theme.colors.primary} />
       </HamburgerMenu>
       <NavMenu open={menuOpen}>
-        {items.map((item) => (
-          <NavItem key={item.id}>
+        {items.map((item, index) => (
+          <NavItem key={index}>
             <NavLink href={item.link}>{item.name}</NavLink>
           </NavItem>
         ))}

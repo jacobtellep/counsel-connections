@@ -47,7 +47,7 @@ const NavMenu = styled.ul`
     justify-content: center;
     left: 0;
     margin-top: 0;
-    opacity: ${(props) => (props.open ? 0.75 : 1)};
+    opacity: ${(props) => (props.open ? 0.95 : 1)};
     padding: 0 1rem;
     position: fixed;
     top: 0;

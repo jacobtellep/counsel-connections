@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
 const JumbotronWrapper = styled.div`
+  display: flex;
   height: 100vh;
-  max-height: 500px;
+  justify-content: center;
+  max-height: 600px;
   position: relative;
+  text-align: center;
   width: 100%;
 `;
 
@@ -17,12 +20,13 @@ const Overlay = styled.div`
 `;
 
 const Heading = styled.h1`
+  align-items: center;
   color: ${(props) => props.theme.colors.white};
+  display: flex;
+  justify-content: center;
   font-size: 3.6rem;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  max-width: 500px;
+  position: relative;
 `;
 
 export { JumbotronWrapper, Overlay, Heading };

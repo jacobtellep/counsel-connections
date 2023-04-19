@@ -34,8 +34,8 @@ const TimelineItem = ({ date, eventGuests, id, image }) => {
         </DescriptionContainer>
         <ImageContainer height={image.height} width={image.width}>
           <Image
-            blurDataURL='/assets/feb-23-event.jpeg?w=10&h=10'
-            src='/assets/feb-23-event.jpeg'
+            blurDataURL={`${image.src}?w=10&h=10`}
+            src={image.src}
             height={(image.height / image.width) * 854}
             width={854}
           />

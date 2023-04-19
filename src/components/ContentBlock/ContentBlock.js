@@ -3,8 +3,8 @@ import { Container, Content, Heading } from './ContentBlock.styled';
 const ContentBlock = ({ headingText, content }) => {
   return (
     <Container>
-      <Heading>{headingText}</Heading>
-        <Content>{content}</Content>
+      {headingText && <Heading>{headingText}</Heading>}
+      {content && <Content>{content}</Content>}
     </Container>
   );
 };

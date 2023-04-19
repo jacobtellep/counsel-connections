@@ -24,8 +24,10 @@ const Heading = styled.h1`
   align-items: center;
   color: ${(props) => props.theme.colors.white};
   display: flex;
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   justify-content: center;
+  text-align: center;
+  width: 100%;
 `;
 
 export { Container, Content, Heading };

@@ -1,10 +1,11 @@
 import Layout from '@/layout';
 import Publications from '@/screens/Publications';
+import fixtures from '@/screens/Publications/fixtures';
 
 const PublicationsPage = () => {
   return (
-    <Layout>
-      <Publications />
+    <Layout {...fixtures}>
+      <Publications {...fixtures.publications} />
     </Layout>
   );
 };

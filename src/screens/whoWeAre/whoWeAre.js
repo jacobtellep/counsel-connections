@@ -17,12 +17,12 @@ const WhoWeAre = (props) => {
       <LeadershipContainer>
         {props.leadershipTeam.map((member, index) => {
           return (
-            <>
+            <LeadershipContainer key={index}>
               <Member key={index}>{member.description}</Member>
               {index !== props.leadershipTeam.length - 1 && (
                 <HorizontalLine height='1px' />
               )}
-            </>
+            </LeadershipContainer>
           );
         })}
       </LeadershipContainer>

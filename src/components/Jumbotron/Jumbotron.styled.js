@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
 const JumbotronWrapper = styled.div`
+  box-sizing: border-box;
   display: flex;
   height: 100vh;
   justify-content: center;
   max-height: 600px;
+  padding: 0 8px;
   position: relative;
   text-align: center;
   width: 100%;

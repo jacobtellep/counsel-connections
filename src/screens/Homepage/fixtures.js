@@ -1,6 +1,6 @@
 export default {
   pageTitle: 'Home',
-  pageDescription: 'Members of Counsel Connections',
+  pageDescription: 'What We Have Been Up To',
   ogImageUrl: '',
   homepage: {
     jumbotron: {

@@ -31,7 +31,7 @@ const Heading = styled.h1`
   align-items: center;
   color: ${(props) => props.theme.colors.white};
   display: flex;
-  font-size: 2.2rem;
+  font-size: ${(props) => (props.pageHeading ? '3rem' : '2.2rem')};
   justify-content: center;
   text-align: center;
   width: 100%;

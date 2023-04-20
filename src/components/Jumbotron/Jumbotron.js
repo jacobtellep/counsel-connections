@@ -12,8 +12,6 @@ const Jumbotron = ({ imageUrl, imageAlt, headingText, mobileImageUrl }) => {
 
   const isMobile = width <= parseInt(theme.breakpoints.medium);
 
-  console.log('isMobile', isMobile);
-
   return (
     <JumbotronWrapper>
       <Image

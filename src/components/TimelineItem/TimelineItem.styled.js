@@ -96,7 +96,7 @@ const ImageContainer = styled.div`
   }
 
   @media (max-width: 430px) {
-    border-radius: 12px;
+    border-radius: 8px;
   }
 `;
 

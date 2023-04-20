@@ -1,13 +1,13 @@
 export default {
-  pageTitle: 'Sponsors',
-  pageDescription: 'Counsel Connections Sponsors',
+  pageTitle: 'Featured Guests',
+  pageDescription: 'Counsel Connections Featured Guests',
   ogImageUrl: '',
-  sponsors: {
+  featuredGuests: {
     contentBlock: {
-      headingText: 'Sponsors',
+      headingText: 'Featured Guests',
       pageHeading: true,
     },
-    sponsors: [
+    featuredGuests: [
       {
         description: 'West Virginia Young Lawyers’ Section',
       },
@@ -28,6 +28,14 @@ export default {
       },
       {
         description: 'Didgit3 LLC',
+      },
+    ],
+    partners: [
+      {
+        description: 'West Virginia Young Lawyers’ Section',
+      },
+      {
+        description: 'Jackson Kelly PLLC',
       },
     ],
   },

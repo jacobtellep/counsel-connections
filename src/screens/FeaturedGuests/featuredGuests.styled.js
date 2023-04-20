@@ -10,9 +10,19 @@ const Container = styled.div`
   width: 100%;
 `;
 
-const Description = styled.p`
+const FeaturedGuestsContainer = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+`;
+
+const FeaturedGuest = styled.p`
   color: ${(props) => props.theme.colors.primary};
   font-family: ${(props) => props.theme.fontFamilies.secondary};
+  font-size: 1.6rem;
+  margin: 0.5rem;
   max-width: 800px;
   text-align: center;
 `;
@@ -22,21 +32,4 @@ const Heading = styled.h2`
   font-size: 2rem;
 `;
 
-const LeadershipContainer = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  max-width: 600px;
-  width: 100%;
-`;
-
-const Member = styled.p`
-  color: ${(props) => props.theme.colors.primary};
-  font-family: ${(props) => props.theme.fontFamilies.secondary};
-  font-size: 1.6rem;
-  margin: 0.5rem;
-  max-width: 800px;
-  text-align: center;
-`;
-
-export { Container, Description, Heading, LeadershipContainer, Member };
+export { Container, FeaturedGuestsContainer, FeaturedGuest, Heading };

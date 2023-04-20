@@ -41,7 +41,7 @@ export default {
         description: 'Zachary Whitfield - Generation Huntington',
       },
       {
-        description: 'Isaac Sinclair - Up Next Charlie Wes',
+        description: 'Isaac Sinclair - Up Next Charlie West',
       },
       {
         description: 'John Williams - West Virginia House of Delegates',

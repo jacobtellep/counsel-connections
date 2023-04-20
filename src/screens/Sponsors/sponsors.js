@@ -16,7 +16,7 @@ const Sponsors = (props) => {
             <SponsorsContainer key={index}>
               <Sponsor key={index}>{sponsor.description}</Sponsor>
               {index !== props.sponsors.length - 1 && (
-                <HorizontalLine height='1px' width='20px' />
+                <HorizontalLine height='1px' width='20px' list={true} />
               )}
             </SponsorsContainer>
           );

@@ -18,7 +18,7 @@ const FeaturedGuests = (props) => {
             <FeaturedGuestsContainer key={index}>
               <FeaturedGuest key={index}>{partner.description}</FeaturedGuest>
               {index !== props.partners.length - 1 && (
-                <HorizontalLine height='1px' width='12px' />
+                <HorizontalLine height='1px' width='12px' list={true} />
               )}
             </FeaturedGuestsContainer>
           );
@@ -31,7 +31,7 @@ const FeaturedGuests = (props) => {
                 {featuredGuest.description}
               </FeaturedGuest>
               {index !== props.featuredGuests.length - 1 && (
-                <HorizontalLine height='1px' width='20px' />
+                <HorizontalLine height='1px' width='20px' list={true} />
               )}
             </FeaturedGuestsContainer>
           );

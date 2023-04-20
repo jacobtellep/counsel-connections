@@ -1,4 +1,4 @@
-import { Container, Timeline } from './Homepage.styled';
+import { Container, Timeline } from './homepage.styled';
 import Jumbotron from '@/components/Jumbotron';
 import ContentBlock from '@/components/ContentBlock';
 import TimelineItem from '@/components/TimelineItem';

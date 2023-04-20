@@ -1,6 +1,6 @@
 import Layout from '@/layout';
-import WhoWeAre from '@/screens/WhoWeAre';
-import fixtures from '@/screens/WhoWeAre/fixtures';
+import WhoWeAre from '@/screens/whoWeAre';
+import fixtures from '@/screens/whoWeAre/fixtures';
 
 const WhoWeArePage = () => {
   return (

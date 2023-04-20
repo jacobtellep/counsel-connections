@@ -1,9 +1,9 @@
 import { Container, Content, Heading } from './ContentBlock.styled';
 
-const ContentBlock = ({ headingText, content }) => {
+const ContentBlock = ({ headingText, content, pageHeading }) => {
   return (
     <Container>
-      {headingText && <Heading>{headingText}</Heading>}
+      {headingText && <Heading pageHeading={pageHeading}>{headingText}</Heading>}
       {content && <Content>{content}</Content>}
     </Container>
   );

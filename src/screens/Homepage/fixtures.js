@@ -7,6 +7,7 @@ export default {
       headingText: 'Welcome to Counsel Connections',
       imageUrl: '/assets/huntington-live-on-the-levy.jpg',
       imageAlt: 'Huntington and Live on the Levy',
+      mobileImageUrl: '/assets/mobile-jumbo.jpg',
     },
     contentBlock: {
       headingText: "What We've Been Up To",

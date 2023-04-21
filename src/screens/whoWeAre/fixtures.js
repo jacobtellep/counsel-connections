@@ -51,7 +51,7 @@ export default {
           'Carrington Riggs - West Virginia Supreme Court of Appeals',
       },
       {
-        description: 'Katie Hensley - West Virginia State Bar',
+        description: 'Parker D\'Antoni - WVU Law Student Representative',
       },
       {
         description: 'Joshua Higginbotham - Marketing Consultant',

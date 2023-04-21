@@ -9,26 +9,32 @@ export default {
     },
     featuredGuests: [
       {
-        description: 'West Virginia Young Lawyers’ Section',
+        description: 'Supreme Court of Appeals of West Virginia - Justice C. Haley Bunn',
       },
       {
-        description: 'Jackson Kelly PLLC',
+        description: 'Intermediate Appellate Court - Judge Thomas E. Scarr',
       },
       {
-        description: 'Baker Tilly US, LLP',
+        description: 'WVU College of Law - Dean Amelia Smith Rinehart',
       },
       {
-        description: 'Farrell White & Legg PLLC',
+        description: 'Judge Dan O’Hanlon',
       },
       {
-        description: 'Shaffer & Shaffer PLLC',
+        description: 'State Bar President Ben Mishoe',
       },
       {
-        description: 'Rhetoric',
+        description: 'Members of the West Virginia Legislature',
       },
       {
-        description: 'Didgit3 LLC',
+        description: 'West Virginia School of Osteopathic Medicine - James Nemitz, Ph.D',
       },
+      {
+        description: 'Chief Executive Officer at Marshall Health - Beth “Buffy” Hammers',
+      },
+      {
+        description: 'Supreme Court of Appeals of West Virginia Justice Tim Armstead',
+      }
     ],
     partners: [
       {

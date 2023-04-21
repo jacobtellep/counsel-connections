@@ -18,7 +18,7 @@ const Publications = (props) => {
                 {publication.description}
               </Publication>
               {index !== props.publications.length - 1 && (
-                <HorizontalLine height='1px' width='20px' list={true} />
+                <HorizontalLine height='1px' width='20px' list />
               )}
             </PublicationsContainer>
           );

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -19,6 +19,7 @@ import items from './menuItems';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
+  const navbarRef = useRef(null);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -30,8 +31,15 @@ const Navbar = () => {
     }
   };
 
+  useEffect(() => {
+    if (navbarRef.current) {
+      const navbarHeight = navbarRef.current.clientHeight;
+      document.body.style.paddingTop = `${navbarHeight}px`;
+    }
+  }, []);
+
   return (
-    <NavbarContainer>
+    <NavbarContainer ref={navbarRef}>
       <NavBrand href='/'>
         <Image
           blurDataURL='/assets/logo.png?w=10&h=10'

@@ -6,8 +6,8 @@ const Line = styled.div`
   width: ${(props) => (props.width ? props.width : '100%')};
 
   @media (max-width: 768px) {
-    height: ${(props) => (props.list ? props.height : '2px')};
-    width: ${(props) => (props.list ? props.width : '100px')};
+    height: ${(props) => (props.isList ? props.height : '2px')};
+    width: ${(props) => (props.isList ? props.width : '100px')};
   }
 `;
 

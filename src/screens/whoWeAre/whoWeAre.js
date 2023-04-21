@@ -20,7 +20,7 @@ const WhoWeAre = (props) => {
             <LeadershipContainer key={index}>
               <Member key={index}>{member.description}</Member>
               {index !== props.leadershipTeam.length - 1 && (
-                <HorizontalLine height='1px' width='20px' list={true} />
+                <HorizontalLine height='1px' width='20px' list />
               )}
             </LeadershipContainer>
           );

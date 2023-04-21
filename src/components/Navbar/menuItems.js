@@ -1,5 +1,9 @@
 export default [
     {
+        name: 'Home',
+        link: '/',
+    },
+    {
         name: 'Who We Are',
         link: '/who-we-are',
     },

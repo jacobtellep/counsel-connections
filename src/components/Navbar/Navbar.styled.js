@@ -6,9 +6,12 @@ const NavbarContainer = styled.div`
   background-color: ${(props) => props.theme.colors.white};
   display: flex;
   justify-content: space-between;
-  position: relative;
+  position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 9999;
 `;
+
 
 // ------------------------------------
 

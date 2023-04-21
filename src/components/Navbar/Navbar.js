@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -17,12 +18,17 @@ import items from './menuItems';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const router = useRouter();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  // ------------------------------------
+  const handleLinkClick = (url) => {
+    if (router.asPath === url) {
+      setMenuOpen(false);
+    }
+  };
 
   return (
     <NavbarContainer>
@@ -41,7 +47,9 @@ const Navbar = () => {
       <NavMenu open={menuOpen}>
         {items.map((item, index) => (
           <NavItem key={index}>
-            <NavLink href={item.link}>{item.name}</NavLink>
+            <NavLink href={item.link} onClick={() => handleLinkClick(item.link)}>
+              {item.name}
+            </NavLink>
           </NavItem>
         ))}
       </NavMenu>

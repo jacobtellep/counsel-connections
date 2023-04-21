@@ -14,6 +14,9 @@ export default {
         description: 'Julian Pecora - Farrell White, and Legg PLLC',
       },
       {
+        description: 'Isaac Sinclair - United Bank',
+      },
+      {
         description: 'Austin Smith - Dentons',
       },
       {
@@ -39,9 +42,6 @@ export default {
       },
       {
         description: 'Zachary Whitfield - Generation Huntington',
-      },
-      {
-        description: 'Isaac Sinclair - Up Next Charlie Wes',
       },
       {
         description: 'John Williams - West Virginia House of Delegates',

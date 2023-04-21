@@ -107,10 +107,10 @@ export default {
         id: 6,
         eventGuests: [
           {
-            name: 'The Honorable Irene M. Keeley',
+            name: 'Honorable Thomas E. Johnston',
           },
           {
-            name: 'Northern District of West Virginia',
+            name: 'Chief Judge United States District Court Southern District of West Virignia',
           }
         ],
         image: {
@@ -136,6 +136,42 @@ export default {
           src: '/assets/aug-17-event.jpeg',
           width: 2048,
           height: 1536,
+        },
+      },
+      {
+        date: 'July 13, 2022',
+        id: 8,
+        eventGuests: [
+          {
+            name: 'Judge Thom Scarr',
+          },
+          {
+            name: 'West Virginia Intermediate Court of Appeals',
+          }
+        ],
+        image: {
+          alt: 'July 13, 2022',
+          src: '/assets/july-13-event.jpeg',
+          width: 1170,
+          height: 1548,
+        },
+      },
+      {
+        date: 'June 15, 2022',
+        id: 8,
+        eventGuests: [
+          {
+            name: 'Judge Dan O\'Hanlon',
+          },
+          {
+            name: 'Senior Status Judge West Virginia Supreme Court of Appeals',
+          }
+        ],
+        image: {
+          alt: 'June 15, 2022',
+          src: '/assets/june-15-event.jpeg',
+          width: 585,
+          height: 775,
         },
       },
     ],

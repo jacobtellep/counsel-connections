@@ -12,17 +12,6 @@ const FeaturedGuests = (props) => {
     <Container>
       <ContentBlock {...props.contentBlock} />
       <FeaturedGuestsContainer>
-        <Heading>Past Partners</Heading>
-        {props.partners.map((partner, index) => {
-          return (
-            <FeaturedGuestsContainer key={index}>
-              <FeaturedGuest key={index}>{partner.description}</FeaturedGuest>
-              {index !== props.partners.length - 1 && (
-                <HorizontalLine height='1px' width='12px' list={true} />
-              )}
-            </FeaturedGuestsContainer>
-          );
-        })}
         <Heading>Past Featured Guests</Heading>
         {props.featuredGuests.map((featuredGuest, index) => {
           return (
@@ -32,6 +21,17 @@ const FeaturedGuests = (props) => {
               </FeaturedGuest>
               {index !== props.featuredGuests.length - 1 && (
                 <HorizontalLine height='1px' width='20px' list={true} />
+              )}
+            </FeaturedGuestsContainer>
+          );
+        })}
+        <Heading>Past Partners</Heading>
+        {props.partners.map((partner, index) => {
+          return (
+            <FeaturedGuestsContainer key={index}>
+              <FeaturedGuest key={index}>{partner.description}</FeaturedGuest>
+              {index !== props.partners.length - 1 && (
+                <HorizontalLine height='1px' width='12px' list={true} />
               )}
             </FeaturedGuestsContainer>
           );

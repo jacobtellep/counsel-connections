@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   Container,
   FeaturedGuestsContainer,
@@ -7,31 +8,31 @@ import {
 import ContentBlock from '@/components/ContentBlock';
 import HorizontalLine from '@/components/HorizontalLine';
 
-const FeaturedGuests = (props) => {
+const FeaturedGuests = ({ contentBlock, featuredGuests, partners }) => {
   return (
     <Container>
-      <ContentBlock {...props.contentBlock} />
+      <ContentBlock {...contentBlock} />
       <FeaturedGuestsContainer>
         <Heading>Past Featured Guests</Heading>
-        {props.featuredGuests.map((featuredGuest, index) => {
+        {featuredGuests.map((featuredGuest, index) => {
           return (
             <FeaturedGuestsContainer key={index}>
               <FeaturedGuest key={index}>
                 {featuredGuest.description}
               </FeaturedGuest>
-              {index !== props.featuredGuests.length - 1 && (
-                <HorizontalLine height='1px' width='20px' list={true} />
+              {index !== featuredGuests.length - 1 && (
+                <HorizontalLine height='1px' width='20px' list />
               )}
             </FeaturedGuestsContainer>
           );
         })}
         <Heading>Past Partners</Heading>
-        {props.partners.map((partner, index) => {
+        {partners.map((partner, index) => {
           return (
             <FeaturedGuestsContainer key={index}>
               <FeaturedGuest key={index}>{partner.description}</FeaturedGuest>
-              {index !== props.partners.length - 1 && (
-                <HorizontalLine height='1px' width='12px' list={true} />
+              {index !== partners.length - 1 && (
+                <HorizontalLine height='1px' width='12px' list />
               )}
             </FeaturedGuestsContainer>
           );
@@ -39,6 +40,24 @@ const FeaturedGuests = (props) => {
       </FeaturedGuestsContainer>
     </Container>
   );
+};
+
+FeaturedGuests.propTypes = {
+  contentBlock: PropTypes.shape({
+    headingText: PropTypes.string,
+    content: PropTypes.string,
+    pageHeading: PropTypes.bool,
+  }),
+  featuredGuests: PropTypes.arrayOf(
+    PropTypes.shape({
+      description: PropTypes.string,
+    })
+  ),
+  partners: PropTypes.arrayOf(
+    PropTypes.shape({
+      description: PropTypes.string,
+    })
+  ),
 };
 
 export default FeaturedGuests;

@@ -13,7 +13,6 @@ const Container = styled.footer`
 
 const Heading = styled.h2`
   color: ${(props) => props.theme.colors.white};
-  font-family: ${(props) => props.theme.fontFamilies.secondary};
   font-size: 1.8rem;
 `;
 

@@ -14,7 +14,7 @@ const Description = styled.p`
   box-sizing: border-box;
   color: ${(props) => props.theme.colors.primary};
   font-family: ${(props) => props.theme.fontFamilies.secondary};
-  /* padding: 0 16px; */
+  padding: 0 16px;
   max-width: 800px;
   text-align: center;
 `;

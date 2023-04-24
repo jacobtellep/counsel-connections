@@ -32,6 +32,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
+          <link rel='icon' href='/assets/logo.png' />
           <link
             href='https://fonts.googleapis.com/css2?family=Lexend&display=swap'
             rel='stylesheet'

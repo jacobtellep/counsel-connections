@@ -12,7 +12,6 @@ const NavbarContainer = styled.div`
   z-index: 9999;
 `;
 
-
 // ------------------------------------
 
 const NavBrand = styled.a`

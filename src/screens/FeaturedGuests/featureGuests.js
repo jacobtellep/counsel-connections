@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import {
   Container,
   FeaturedGuestsContainer,
+  FeaturedGuestContainer,
   FeaturedGuest,
   Heading,
 } from './featuredGuests.styled';
@@ -16,25 +17,25 @@ const FeaturedGuests = ({ contentBlock, featuredGuests, partners }) => {
         <Heading>Past Featured Guests</Heading>
         {featuredGuests.map((featuredGuest, index) => {
           return (
-            <FeaturedGuestsContainer key={index}>
+            <FeaturedGuestContainer key={index}>
               <FeaturedGuest key={index}>
                 {featuredGuest.description}
               </FeaturedGuest>
               {index !== featuredGuests.length - 1 && (
-                <HorizontalLine height='1px' width='20px' list />
+                <HorizontalLine height='1px' list />
               )}
-            </FeaturedGuestsContainer>
+            </FeaturedGuestContainer>
           );
         })}
         <Heading>Past Partners</Heading>
         {partners.map((partner, index) => {
           return (
-            <FeaturedGuestsContainer key={index}>
+            <FeaturedGuestContainer key={index}>
               <FeaturedGuest key={index}>{partner.description}</FeaturedGuest>
               {index !== partners.length - 1 && (
-                <HorizontalLine height='1px' width='12px' list />
+                <HorizontalLine height='1px' list />
               )}
-            </FeaturedGuestsContainer>
+            </FeaturedGuestContainer>
           );
         })}
       </FeaturedGuestsContainer>

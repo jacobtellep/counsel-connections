@@ -8,6 +8,10 @@ const Container = styled.div`
   justify-content: center;
   row-gap: 16px;
   width: 100%;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.small}) {
+    align-items: flex-start;
+  }
 `;
 
 const Description = styled.p`
@@ -17,28 +21,45 @@ const Description = styled.p`
   padding: 0 16px;
   max-width: 800px;
   text-align: center;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.small}) {
+    text-align: left;
+  }
 `;
 
 const Heading = styled.h2`
   color: ${(props) => props.theme.colors.primaryLight};
   font-size: 2rem;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.small}) {
+    padding-left: 8px;
+  }
 `;
 
 const LeadershipContainer = styled.div`
+  box-sizing: border-box;
   align-items: center;
   display: flex;
   flex-direction: column;
   max-width: 600px;
+  padding: 0 8px;
   width: 100%;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.small}) {
+    align-items: flex-start;
+  }
 `;
 
 const Member = styled.p`
   color: ${(props) => props.theme.colors.primary};
   font-family: ${(props) => props.theme.fontFamilies.secondary};
   font-size: 1.6rem;
-  margin: 0.5rem;
   max-width: 800px;
   text-align: center;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.small}) {
+    text-align: left;
+  }
 `;
 
 export { Container, Description, Heading, LeadershipContainer, Member };

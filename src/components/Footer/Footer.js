@@ -4,7 +4,6 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import {
   Container,
-  Heading,
   Link,
   SocialMediaContainer,
   Copyright,
@@ -13,7 +12,6 @@ import {
 const Footer = () => {
   return (
     <Container>
-      <Heading>Contact Us</Heading>
       <SocialMediaContainer>
         <Link href='https://www.facebook.com/groups/751234515996355/'>
           <FontAwesomeIcon icon={faFacebookSquare} color='white' size='2x' />

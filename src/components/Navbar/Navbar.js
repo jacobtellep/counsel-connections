@@ -16,7 +16,7 @@ import theme from '@/lib/theme';
 import Image from '@/components/Image';
 import items from './menuItems';
 
-const Navbar = () => {
+const Navbar = ({ setNavbarHeight }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
   const navbarRef = useRef(null);
@@ -34,10 +34,11 @@ const Navbar = () => {
   useEffect(() => {
     if (navbarRef.current) {
       const navbarHeight = navbarRef.current.clientHeight;
+      setNavbarHeight(navbarHeight);
       document.body.style.paddingTop = `${navbarHeight}px`;
     }
   }, []);
-
+  
   return (
     <NavbarContainer ref={navbarRef}>
       <NavBrand href='/'>
@@ -55,7 +56,10 @@ const Navbar = () => {
       <NavMenu open={menuOpen}>
         {items.map((item, index) => (
           <NavItem key={index}>
-            <NavLink href={item.link} onClick={() => handleLinkClick(item.link)}>
+            <NavLink
+              href={item.link}
+              onClick={() => handleLinkClick(item.link)}
+            >
               {item.name}
             </NavLink>
           </NavItem>

@@ -6,7 +6,7 @@ export default {
     jumbotron: {
       headingText: 'Welcome to Counsel Connections',
       imageUrl: '/assets/huntington-live-on-the-levy.jpg',
-      imageAlt: 'Huntington and Live on the Levy',
+      imageAlt: 'Photo of Live on the Levy http://charlestonstormwater.org/river-proud/ and Photo of Huntington found at https://www.cityofhuntington.com/residents/photo-gallery/',
       mobileImageUrl: '/assets/mobile-jumbo.jpg',
     },
     contentBlock: {

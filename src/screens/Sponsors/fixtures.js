@@ -24,6 +24,9 @@ export default {
         description: 'Shaffer & Shaffer PLLC',
       },
       {
+        description: 'United Bank',
+      },
+      {
         description: 'Rhetoric',
       },
       {

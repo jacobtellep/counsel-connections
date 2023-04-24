@@ -11,25 +11,43 @@ const Container = styled.div`
 `;
 
 const FeaturedGuestsContainer = styled.div`
+  box-sizing: border-box;
   align-items: center;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   max-width: 600px;
+  padding: 0 16px;
   width: 100%;
+`;
+
+const FeaturedGuestContainer = styled(FeaturedGuestsContainer)`
+  padding: 0;
 `;
 
 const FeaturedGuest = styled.p`
   color: ${(props) => props.theme.colors.primary};
   font-family: ${(props) => props.theme.fontFamilies.secondary};
   font-size: 1.6rem;
-  margin: 0.5rem;
   max-width: 800px;
   text-align: center;
+  width: 100%;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.small}) {
+    text-align: left;
+  }
 `;
 
 const Heading = styled.h2`
   color: ${(props) => props.theme.colors.primaryLight};
   font-size: 2rem;
+  width: 100%;
 `;
 
-export { Container, FeaturedGuestsContainer, FeaturedGuest, Heading };
+export {
+  Container,
+  FeaturedGuestsContainer,
+  FeaturedGuestContainer,
+  FeaturedGuest,
+  Heading,
+};

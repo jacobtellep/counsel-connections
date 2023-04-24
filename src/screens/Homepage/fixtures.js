@@ -11,8 +11,6 @@ export default {
     },
     contentBlock: {
       headingText: "What We've Been Up To",
-      content:
-        'Springing into action: A look at our recent achievements and upcoming initiatives',
     },
     timelineItems: [
       {
@@ -75,7 +73,7 @@ export default {
           },
           {
             name: 'Dean of the West Virginia University College of Law',
-          }
+          },
         ],
         image: {
           alt: 'November 10, 2022',
@@ -93,7 +91,7 @@ export default {
           },
           {
             name: 'Supreme Court of Appeals of West Virginia',
-          }
+          },
         ],
         image: {
           alt: 'October 20, 2022',
@@ -111,7 +109,7 @@ export default {
           },
           {
             name: 'Chief Judge United States District Court Southern District of West Virignia',
-          }
+          },
         ],
         image: {
           alt: 'September 15, 2022',
@@ -129,7 +127,7 @@ export default {
           },
           {
             name: 'State Bar President',
-          }
+          },
         ],
         image: {
           alt: 'August 17, 2022',
@@ -147,7 +145,7 @@ export default {
           },
           {
             name: 'West Virginia Intermediate Court of Appeals',
-          }
+          },
         ],
         image: {
           alt: 'July 13, 2022',
@@ -161,11 +159,11 @@ export default {
         id: 9,
         eventGuests: [
           {
-            name: 'Judge Dan O\'Hanlon',
+            name: "Judge Dan O'Hanlon",
           },
           {
             name: 'Senior Status Judge West Virginia Supreme Court of Appeals',
-          }
+          },
         ],
         image: {
           alt: 'June 15, 2022',

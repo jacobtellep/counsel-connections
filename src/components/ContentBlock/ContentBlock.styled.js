@@ -9,8 +9,12 @@ const Container = styled.div`
   height: 100vh;
   justify-content: center;
   max-height: 300px;
-  padding: 0 8px;
+  padding: 0 20px;
   width: 100%;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.small}) {
+    max-height: 200px;
+  }
 `;
 
 const Content = styled.p`
@@ -23,7 +27,11 @@ const Content = styled.p`
 
   @media (max-width: ${(props) => props.theme.breakpoints.medium}) {
     font-size: 1.4rem;
-    width: 96%;
+    width: 100%;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.small}) {
+    text-align: left;
   }
 `;
 
@@ -37,8 +45,13 @@ const Heading = styled.h1`
   width: 100%;
 
   @media (max-width: ${(props) => props.theme.breakpoints.medium}) {
-    font-size: 1.8rem;
-    width: 96%;
+    font-size: 2.8rem;
+    width: 100%;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.small}) {
+    justify-content: flex-start;
+    text-align: left;
   }
 `;
 

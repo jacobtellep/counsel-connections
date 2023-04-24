@@ -41,7 +41,10 @@ const FeaturedGuest = styled.p`
 const Heading = styled.h2`
   color: ${(props) => props.theme.colors.primaryLight};
   font-size: 2rem;
-  width: 100%;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.small}) {
+    width: 100%;
+  }
 `;
 
 export {

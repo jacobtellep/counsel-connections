@@ -1,0 +1,48 @@
+import styled from 'styled-components';
+import Link from 'next/link';
+
+const Container = styled.div`
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 16px;
+  width: 100%;
+`;
+
+const ContactsContainer = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  padding: 0 16px;
+  width: 100%;
+  row-gap: 32px;
+`;
+
+const Contact = styled.p`
+  color: ${(props) => props.theme.colors.primary};
+  font-family: ${(props) => props.theme.fontFamilies.secondary};
+  font-size: 1.6rem;
+  max-width: 800px;
+  text-align: center;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.small}) {
+    text-align: left;
+  }
+`;
+
+const ContactLink = styled(Link)`
+  color: ${(props) => props.theme.colors.primary};
+  font-family: ${(props) => props.theme.fontFamilies.secondary};
+  font-size: 1.6rem;
+  max-width: 800px;
+  transition: color 0.3s;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primaryLight};
+  }
+`;
+
+export { Container, ContactsContainer, Contact, ContactLink };

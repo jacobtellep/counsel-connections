@@ -25,7 +25,6 @@ const ContactUs = ({ contentBlock }) => {
             Facebook
           </ContactLink>
         </Contact>
-        <HorizontalLine height='1px' list />
       </ContactsContainer>
     </Container>
   );

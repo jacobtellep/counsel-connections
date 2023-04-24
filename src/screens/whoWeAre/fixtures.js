@@ -29,7 +29,7 @@ export default {
         description: 'Austin Lewis - Farrell White, and Legg PLLC',
       },
       {
-        description: 'Emily Renzelli - Orrick, Herrington & Sutcliffe LL',
+        description: 'Emily Renzelli - Orrick, Herrington & Sutcliffe LLC',
       },
       {
         description: 'Sarah Walling - OVP Health',

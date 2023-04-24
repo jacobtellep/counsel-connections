@@ -35,4 +35,10 @@ const SocialMediaContainer = styled.div`
   width: 100%;
 `;
 
-export { Container, Heading, Link, SocialMediaContainer };
+const Copyright = styled.p`
+  color: ${(props) => props.theme.colors.white};
+  font-size: 1rem;
+  margin-top: 16px;
+`;
+
+export { Container, Heading, Link, SocialMediaContainer, Copyright };

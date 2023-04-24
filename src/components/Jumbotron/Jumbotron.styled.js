@@ -10,6 +10,10 @@ const JumbotronWrapper = styled.div`
   position: relative;
   text-align: center;
   width: 100%;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.small}) {
+    text-align: left;
+  }
 `;
 
 const Overlay = styled.div`
@@ -28,11 +32,12 @@ const Heading = styled.h1`
   justify-content: center;
   font-size: 3.6rem;
   max-width: 500px;
+  padding-left: 16px;
   position: relative;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
   @media (max-width: ${(props) => props.theme.breakpoints.medium}) {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
   }
 `;
 

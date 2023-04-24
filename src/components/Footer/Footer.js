@@ -7,6 +7,7 @@ import {
   Heading,
   Link,
   SocialMediaContainer,
+  Copyright,
 } from './Footer.styled';
 
 const Footer = () => {
@@ -21,6 +22,7 @@ const Footer = () => {
           <FontAwesomeIcon icon={faEnvelope} color='white' size='2x' />
         </Link>
       </SocialMediaContainer>
+      <Copyright>&#169; 2023 Counsel Connections</Copyright>
     </Container>
   );
 };

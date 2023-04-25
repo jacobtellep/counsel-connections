@@ -4,7 +4,6 @@ import {
   Publication,
 } from './publications.styled';
 import ContentBlock from '@/components/ContentBlock';
-import HorizontalLine from '@/components/HorizontalLine';
 
 const Publications = (props) => {
   return (
@@ -17,9 +16,6 @@ const Publications = (props) => {
               <Publication href={publication.url} key={index}>
                 {publication.description}
               </Publication>
-              {index !== props.publications.length - 1 && (
-                <HorizontalLine height='1px' list />
-              )}
             </PublicationsContainer>
           );
         })}

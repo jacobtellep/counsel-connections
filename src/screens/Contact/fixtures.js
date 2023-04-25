@@ -1,6 +1,6 @@
 export default {
-  pageTitle: 'Featured Guests',
-  pageDescription: 'Counsel Connections Featured Guests',
+  pageTitle: 'Contact Us',
+  pageDescription: 'Counsel Connections Contact Page',
   ogImageUrl: '',
   contact: {
     contentBlock: {

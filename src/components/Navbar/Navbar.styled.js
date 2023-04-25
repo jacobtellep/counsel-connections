@@ -35,7 +35,7 @@ const NavBrand = styled.a`
 
 const NavMenu = styled.ul`
   display: flex;
-  font-size: 1.2rem;
+  font-size: 1rem;
   list-style: none;
   padding: 0.5rem 0.5rem;
 
@@ -44,7 +44,7 @@ const NavMenu = styled.ul`
     background-color: ${(props) => props.theme.colors.white};
     display: ${(props) => (props.open ? 'flex' : 'none')};
     flex-direction: column;
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     height: 100%;
     justify-content: center;
     left: 0;
@@ -55,6 +55,10 @@ const NavMenu = styled.ul`
     top: 0;
     width: 100%;
     z-index: 9998;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.xSmall}) {
+    font-size: 1.8rem;
   }
 `;
 

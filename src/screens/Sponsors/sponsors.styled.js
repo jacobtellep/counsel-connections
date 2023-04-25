@@ -11,13 +11,17 @@ const Container = styled.div`
 `;
 
 const SponsorsContainer = styled.div`
-  /* align-items: center; */
+  align-items: center;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   max-width: 600px;
   padding: 0 8px;
   width: 100%;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.small}) {
+    align-items: flex-start;
+  }
 `;
 
 const Sponsor = styled.p`

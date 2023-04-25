@@ -14,12 +14,13 @@ const MemberOfTheMonth = ({ contentBlock, members }) => {
       <MembersContainer>
         {members.map((member, index) => {
           return (
-            <Member>
-              <Heading>{member.date}</Heading>
+            <Member key={index}>
+              <Heading>{member.name}</Heading>
+              <Member>{member.date}</Member>
+              {member.company}
               {index !== members.length - 1 && (
                 <HorizontalLine height='1px' list />
               )}
-              {member.name}
             </Member>
           );
         })}

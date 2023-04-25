@@ -12,16 +12,18 @@ const Container = styled.div`
 `;
 
 const ContactsContainer = styled.div`
+  align-items: center;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   max-width: 600px;
+  min-height: 300px;
   padding: 0 16px;
   width: 100%;
   row-gap: 32px;
 `;
 
-const Contact = styled.p`
+const Contact = styled.div`
   color: ${(props) => props.theme.colors.primary};
   font-family: ${(props) => props.theme.fontFamilies.secondary};
   font-size: 1.6rem;
@@ -29,6 +31,7 @@ const Contact = styled.p`
   text-align: center;
 
   @media (max-width: ${(props) => props.theme.breakpoints.small}) {
+    font-size: 1.2rem;
     text-align: left;
   }
 `;
@@ -42,6 +45,10 @@ const ContactLink = styled(Link)`
 
   &:hover {
     color: ${(props) => props.theme.colors.primaryLight};
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.small}) {
+    font-size: 1.2rem;
   }
 `;
 

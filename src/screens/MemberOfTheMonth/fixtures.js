@@ -8,31 +8,38 @@ export default {
     },
     members: [
       {
-        name: 'Isaiah Robinson - Jackson Kelly PLLC',
+        name: 'Isaiah Robinson',
+        company: 'Jackson Kelly PLLC',
         date: 'April 2023',
       },
       {
-        name: 'Kevin Stryker - Jenkins Fenstermaker PLLC',
+        name: 'Kevin Stryker',
+        company: 'Jenkins Fenstermaker PLLC',
         date: 'March 2023',
       },
       {
-        name: 'Austin Lewis - Farrell, White & Legg PLLC',
+        name: 'Austin Lewis',
+        company: 'Farrell, White & Legg PLLC',
         date: 'February 2023',
       },
       {
-        name: 'Mary Grace Williams - Law clerk at the newly established West Virginia Intermediate Court of Appeals',
+        name: 'Mary Grace Williams',
+        company: 'Law clerk at the newly established West Virginia Intermediate Court of Appeals',
         date: 'January 2023',
       },
       {
-        name: 'Stephen M. Ferguson - Jenkins Fenstermaker PLLC',
+        name: 'Stephen M. Ferguson',
+        company: 'Jenkins Fenstermaker PLLC',
         date: 'December 2022',
       },
       {
-        name: 'Lindsay M. Stollings - Robinson & McElwee PLLC',
+        name: 'Lindsay M. Stollings',
+        company: 'Robinson & McElwee PLLC',
         date: 'November 2022',
       },
       {
-        name: 'Austin Smith - Dentons',
+        name: 'Austin Smith',
+        company: 'Dentons',
         date: 'October 2022',
       },
     ],

@@ -23,6 +23,10 @@ const FeaturedGuestsContainer = styled.div`
 
 const FeaturedGuestContainer = styled(FeaturedGuestsContainer)`
   padding: 0;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.small}) {
+    align-items: flex-start;
+  }
 `;
 
 const FeaturedGuest = styled.p`

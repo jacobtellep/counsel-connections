@@ -24,6 +24,7 @@ const MembersContainer = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   max-width: 600px;
   padding: 0 16px;
   width: 100%;
@@ -33,15 +34,22 @@ const MembersContainer = styled.div`
   }
 `;
 
-const Member = styled.p`
+const Member = styled.div`
+  align-items: center;
   color: ${(props) => props.theme.colors.primary};
+  display: flex;
+  flex-direction: column;
   font-family: ${(props) => props.theme.fontFamilies.secondary};
   font-size: 1.6rem;
+  justify-content: center;
   max-width: 800px;
+  padding-bottom: 16px;
   text-align: center;
   width: 100%;
 
   @media (max-width: ${(props) => props.theme.breakpoints.small}) {
+    align-items: flex-start;
+    font-size: 1.2rem;
     text-align: left;
   }
 `;

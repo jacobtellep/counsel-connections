@@ -16,6 +16,10 @@ export default [
     link: '/featured-guests',
   },
   {
+    name: 'Member of the Month',
+    link: '/member-of-the-month',
+  },
+  {
     name: 'Publications',
     link: '/publications',
   },

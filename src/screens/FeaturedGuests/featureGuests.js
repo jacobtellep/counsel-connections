@@ -18,7 +18,7 @@ const FeaturedGuests = ({ contentBlock, featuredGuests, partners }) => {
         {featuredGuests.map((featuredGuest, index) => {
           return (
             <FeaturedGuestContainer key={index}>
-              <FeaturedGuest key={index}>
+              <FeaturedGuest>
                 {featuredGuest.description}
               </FeaturedGuest>
               {index !== featuredGuests.length - 1 && (

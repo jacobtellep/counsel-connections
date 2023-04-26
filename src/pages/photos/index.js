@@ -3,7 +3,7 @@ import Photos from '@/screens/Photos';
 
 const PhotosPage = () => {
   return (
-    <Layout>
+    <Layout pageTitle='Photos' pageDescription='Counsel Connections Photos'>
       <Photos />
     </Layout>
   );

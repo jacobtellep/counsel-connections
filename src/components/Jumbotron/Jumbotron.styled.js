@@ -34,7 +34,6 @@ const Heading = styled.h1`
   max-width: 500px;
   padding-left: 16px;
   position: relative;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
   @media (max-width: ${(props) => props.theme.breakpoints.medium}) {
     font-size: 2.8rem;

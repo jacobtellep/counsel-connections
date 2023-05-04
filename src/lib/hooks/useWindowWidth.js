@@ -8,12 +8,13 @@ const useWindowWidth = () => {
       setWindowWidth(window.innerWidth);
     };
 
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    if (typeof window !== 'undefined') {
+      handleResize();
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
   }, []);
 
   return windowWidth;

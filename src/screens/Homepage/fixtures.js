@@ -1,4 +1,4 @@
-export default {
+const fixtures = {
   pageTitle: 'Home',
   pageDescription: 'Counsel Connections WV',
   ogImageUrl: '',
@@ -175,3 +175,5 @@ export default {
     ],
   },
 };
+
+export default fixtures;

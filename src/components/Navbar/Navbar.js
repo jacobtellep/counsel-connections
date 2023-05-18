@@ -37,12 +37,13 @@ const Navbar = ({ setNavbarHeight }) => {
       setNavbarHeight(navbarHeight);
       document.body.style.paddingTop = `${navbarHeight}px`;
     }
-  }, []);
-  
+  }, [setNavbarHeight]);
+
   return (
     <NavbarContainer ref={navbarRef}>
       <NavBrand href='/'>
         <Image
+          alt='Counsel Connections Logo'
           blurDataURL='/assets/logo.png?w=10&h=10'
           src='/assets/logo.png'
           height={40}

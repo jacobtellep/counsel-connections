@@ -4,13 +4,9 @@ import useWindowWidth from '@/lib/hooks/useWindowWidth';
 import theme from '@/lib/theme';
 
 const Jumbotron = ({ imageUrl, imageAlt, headingText, mobileImageUrl }) => {
-  let width;
+  const width = useWindowWidth();
 
-  if (typeof window !== 'undefined') {
-    width = useWindowWidth();
-  }
-
-  const isMobile = width <= parseInt(theme.breakpoints.medium);
+  const isMobile = width && width <= parseInt(theme.breakpoints.medium);
 
   return (
     <JumbotronWrapper>

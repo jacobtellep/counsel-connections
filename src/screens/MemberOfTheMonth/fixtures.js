@@ -1,4 +1,4 @@
-export default {
+const fixtures = {
   pageTitle: 'Member of the Month',
   pageDescription: 'Counsel Connections Member of the Month Page',
   ogImageUrl: '',
@@ -45,3 +45,5 @@ export default {
     ],
   },
 };
+
+export default fixtures;

@@ -1,4 +1,4 @@
-export default [
+const items = [
   {
     name: 'Home',
     link: '/',
@@ -32,3 +32,5 @@ export default [
     link: '/contact',
   },
 ];
+
+export default items;

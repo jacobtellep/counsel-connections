@@ -32,7 +32,6 @@ export async function getStaticProps() {
 import fixtures from '@/screens/Publications/fixtures';
 
 const PublicationsPage = (props) => {
-  console.log('props', props);
   return (
     <Layout {...fixtures}>
       <Publications {...fixtures.publications} />

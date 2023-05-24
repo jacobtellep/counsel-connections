@@ -31,7 +31,6 @@ export async function getStaticProps() {
 }
 
 const FeaturedGuestsPage = (props) => {
-  console.log('props', props);
   return (
     <Layout {...fixtures}>
       <FeaturedGuests {...fixtures.featuredGuests} />

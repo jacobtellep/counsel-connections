@@ -31,7 +31,6 @@ export async function getStaticProps() {
 }
 
 const MemberOfTheMonthPage = (props) => {
-  console.log('props', props);
   return (
     <Layout {...fixtures}>
       <MemberOfTheMonth {...fixtures.memberOfTheMonth} />

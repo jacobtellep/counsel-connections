@@ -64,6 +64,8 @@ export const HOMEPAGE_ATTRIBUTES = `
           image {
             title
             url
+            height
+            width
           }
           __typename
         }

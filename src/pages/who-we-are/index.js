@@ -31,7 +31,6 @@ export async function getStaticProps() {
 }
 
 const WhoWeArePage = (props) => {
-  console.log('props', props);
   return (
     <Layout {...fixtures}>
       <WhoWeAre {...fixtures.whoWeAre} />

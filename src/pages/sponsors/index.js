@@ -31,7 +31,6 @@ export async function getStaticProps() {
 }
 
 const SponsorsPage = (props) => {
-  console.log('props', props);
   return (
     <Layout>
       <Sponsors {...fixtures.sponsors} />

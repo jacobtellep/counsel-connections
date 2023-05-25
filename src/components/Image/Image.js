@@ -1,4 +1,3 @@
-// components/ExtendedImage.js
 import React from 'react';
 import NextImage from 'next/legacy/image';
 import { replaceImageURL } from '@/lib/utils';

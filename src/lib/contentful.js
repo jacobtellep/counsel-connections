@@ -11,10 +11,10 @@ export default class GQL {
   }
 
   static spaceId() {
-    if (!process.env.CONTENTFUL_SPACE_ID) {
-      throw new Error("CONTENTFUL_SPACE_ID not defined");
+    if (!process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID) {
+      throw new Error("NEXT_PUBLIC_CONTENTFUL_SPACE_ID not defined");
     }
-    return process.env.CONTENTFUL_SPACE_ID;
+    return process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID;
   }
 
   static endpoint() {

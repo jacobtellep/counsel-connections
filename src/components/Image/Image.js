@@ -1,6 +1,7 @@
 // components/ExtendedImage.js
 import React from 'react';
 import NextImage from 'next/legacy/image';
+import { replaceImageURL } from '@/lib/utils';
 
 const Image = ({
   src,
@@ -23,7 +24,7 @@ const Image = ({
   // TODO: need to look at docs and use style prop instead of objectFit and objectPosition
   return (
     <NextImage
-      src={src}
+      src={replaceImageURL(src)}
       alt={altText}
       width={width}
       height={height}

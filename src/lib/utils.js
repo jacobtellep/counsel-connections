@@ -8,5 +8,5 @@ export const formatDate = (date) => {
 }
 
 export const replaceImageURL = (url) => {
-  return url.replace(`images.ctfassets.net/${process.env.CONTENTFUL_SPACE_ID}`, 'counselconnectionswv.imgix.net');
+  return url.replace(`images.ctfassets.net/ax05lqfmglty`, 'counselconnectionswv.imgix.net');
 }

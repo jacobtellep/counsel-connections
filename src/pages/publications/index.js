@@ -1,12 +1,13 @@
 import Layout from '@/layout';
 import Publications from '@/screens/Publications';
 import Contentful from '@/lib/contentful';
-import { PUBLICATIONS_ATTRIBUTES } from '@/lib/fragments';
+import { PUBLICATIONS_ATTRIBUTES, LINK_ATTRIBUTES } from '@/lib/fragments';
 
 export async function getStaticProps() {
   try {
     const query = `
-  ${PUBLICATIONS_ATTRIBUTES}
+    ${LINK_ATTRIBUTES}
+    ${PUBLICATIONS_ATTRIBUTES}
     query {
       publicationsCollection(limit: 1) {
         items {
@@ -18,9 +19,31 @@ export async function getStaticProps() {
 
     const { data } = await Contentful.fetch(query, {});
 
+    const {
+      title,
+      linksCollection: { items },
+    } = data?.publicationsCollection?.items?.[0];
+
+    const formattedProps = {
+      contentBlock: {
+        headingText: title,
+        pageHeading: true,
+      },
+      publications: items.map((item) => {
+        const { title, url } = item;
+        return {
+          description: title,
+          url,
+        };
+      }),
+    };
+
     return {
       props: {
-        ...data?.publicationsCollection?.items?.[0],
+        pageTitle: 'Publications',
+        pageDescription: 'Counsel Connections Publications',
+        ogImageUrl: '',
+        ...formattedProps,
       },
     };
   } catch (error) {
@@ -29,12 +52,10 @@ export async function getStaticProps() {
   }
 }
 
-import fixtures from '@/screens/Publications/fixtures';
-
 const PublicationsPage = (props) => {
   return (
-    <Layout {...fixtures}>
-      <Publications {...fixtures.publications} />
+    <Layout {...props}>
+      <Publications {...props} />
     </Layout>
   );
 };

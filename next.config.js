@@ -5,7 +5,7 @@ module.exports = async () => {
       styledComponents: true,
     },
     images: {
-      domains: ['images.ctfassets.net'], // TODO: implement IMGIX
+      domains: ['images.ctfassets.net', 'counselconnectionswv.imgix.net'],
     },
   };
 };

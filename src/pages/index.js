@@ -2,8 +2,7 @@ import Layout from '@/layout';
 import Homepage from '@/screens/Homepage';
 import Contentful from '@/lib/contentful';
 import { HOMEPAGE_ATTRIBUTES } from '@/lib/fragments';
-import fixtures from '@/screens/Homepage/fixtures';
-import { formatDate } from '@/lib/utils';
+import { formatDate, replaceImageURL } from '@/lib/utils';
 
 export async function getStaticProps() {
   try {
@@ -40,17 +39,18 @@ export async function getStaticProps() {
         mobileImageUrl: '/assets/mobile-jumbo.jpg',
       },
       timelineItems: items.map((item) => {
+        const { eventDate, featuredGuest, title, image } = item;
         return {
-          date: formatDate(item.eventDate),
+          date: formatDate(eventDate),
           id: count++,
-          eventGuests: item.featuredGuest.map((guest) => {
+          eventGuests: featuredGuest.map((guest) => {
             return { name: guest };
           }),
           image: {
-            alt: item.title,
-            src: item.image.url,
-            height: item.image.height ? parseInt(item.image.height) : 0,
-            width: item.image.width ? parseInt(item.image.width) : 0,
+            alt: title,
+            src: replaceImageURL(image.url),
+            height: image.height ? parseInt(image.height) : 0,
+            width: image.width ? parseInt(image.width) : 0,
           },
         };
       }),

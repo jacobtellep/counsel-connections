@@ -116,7 +116,7 @@ export const MEMBER_OF_THE_MONTH_ATTRIBUTES = `
     title
     memberOfTheMonthListCollection {
       items {
-        ...${MEMBER_ATTRIBUTES}
+        ...Member
       }
     }
     __typename
@@ -131,7 +131,7 @@ export const PUBLICATIONS_ATTRIBUTES = `
     title
     linksCollection {
       items {
-        ...${LINK_ATTRIBUTES}
+        ...Link
       }
     }
   }

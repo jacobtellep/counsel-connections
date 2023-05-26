@@ -2,7 +2,6 @@ import Layout from '@/layout';
 import Photos from '@/screens/Photos';
 import Contentful from '@/lib/contentful';
 import { ASSET_QUERY } from '@/lib/fragments';
-import { parse } from '@fortawesome/fontawesome-svg-core';
 
 export async function getStaticProps() {
   try {

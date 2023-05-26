@@ -25,6 +25,10 @@ const NavBrand = styled.a`
   padding: 0.5rem 0.5rem;
   text-decoration: none;
 
+  &:hover {
+    color: ${(props) => props.theme.colors.primaryHover};
+  }
+
   @media (max-width: 1131px) {
     font-size: 1rem;
     max-width: 200px;
@@ -92,7 +96,7 @@ const NavLink = styled(Link)`
   text-decoration: none;
 
   &:hover {
-    /* color: #ccc; */
+    color: ${(props) => props.theme.colors.primaryHover};
   }
 `;
 

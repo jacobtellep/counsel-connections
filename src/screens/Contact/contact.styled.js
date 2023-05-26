@@ -45,7 +45,7 @@ const ContactLink = styled(Link)`
   transition: color 0.3s;
 
   &:hover {
-    color: ${(props) => props.theme.colors.primaryLight};
+    color: ${(props) => props.theme.colors.primaryHover};
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.small}) {

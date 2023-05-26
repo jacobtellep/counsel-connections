@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import Gallery from 'react-photo-gallery';
 import Image from '@/components/Image';
-import { Container } from './photos.styled';
+import { ButtonContainer, Container, PaginationBtn, Wrapper } from './photos.styled';
 
 const Photos = ({ photos }) => {
   // This is a workaround to prevent SSR issues with react-photo-gallery
   const [isClient, setIsClient] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [photosPerPage] = useState(10);
+  const [photosPerPage] = useState(20);
 
   useEffect(() => {
     setIsClient(true);
@@ -27,7 +27,7 @@ const Photos = ({ photos }) => {
         alt={`Photo ${index}`}
         width={photo.width}
         height={photo.height}
-        layout='responsive'
+        layout="responsive"
       />
     </Container>
   );
@@ -37,18 +37,23 @@ const Photos = ({ photos }) => {
   const currentPhotos = photos.slice(indexOfFirstPhoto, indexOfLastPhoto);
 
   return (
-    <>
+    <Wrapper>
       {isClient && <Gallery photos={currentPhotos} renderImage={imageRenderer} />}
-      <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
-        Previous
-      </button>
-      <button
-        onClick={() => handlePageChange(currentPage + 1)}
-        disabled={currentPage === Math.ceil(photos.length / photosPerPage)}
-      >
-        Next
-      </button>
-    </>
+      <ButtonContainer>
+        <PaginationBtn
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+        >
+          Previous
+        </PaginationBtn>
+        <PaginationBtn
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={currentPage === Math.ceil(photos.length / photosPerPage)}
+        >
+          Next
+        </PaginationBtn>
+      </ButtonContainer>
+    </Wrapper>
   );
 };
 

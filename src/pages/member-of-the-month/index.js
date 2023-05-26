@@ -34,7 +34,7 @@ export async function getStaticProps() {
         return {
           name,
           company,
-          date: formatDate(date),
+          date: formatDate(date, { year: 'numeric', month: 'long' }),
         };
       }),
     };

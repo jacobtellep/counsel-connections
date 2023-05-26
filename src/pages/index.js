@@ -41,7 +41,7 @@ export async function getStaticProps() {
       timelineItems: items.map((item) => {
         const { eventDate, featuredGuest, title, image } = item;
         return {
-          date: formatDate(eventDate),
+          date: formatDate(eventDate, { year: 'numeric', month: 'long', day: 'numeric' }),
           id: count++,
           eventGuests: featuredGuest.map((guest) => {
             return { name: guest };

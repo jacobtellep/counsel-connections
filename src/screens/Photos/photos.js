@@ -341,7 +341,8 @@ const photos = [
 
 const reversePhotos = photos.reverse();
 
-const Photos = () => {
+const Photos = (props) => {
+  console.log('props', props);
   // This is a workaround to prevent SSR issues with react-photo-gallery
   const [isClient, setIsClient] = useState(false);
 

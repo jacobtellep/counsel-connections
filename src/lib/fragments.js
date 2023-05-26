@@ -1,27 +1,15 @@
-//   query {
-
-
-//     sponsorsCollection(limit: 1) {
-//       items {
-//         ...Sponsors
-//       }
-//     }
-//     featuredGuestsCollection(limit: 1) {
-//       items {
-//         ...FeaturedGuests
-//       }
-//     }
-//     memberOfTheMonthCollection(limit: 1) {
-//       items {
-//         ...MemberOfTheMonth
-//       }
-//     }
-// publicationsCollection(limit: 1) {
-//   items {
-//     ...Publications
-//   }
-// }
-//   }
+export const ASSET_QUERY = `
+  query {
+    assetCollection {
+      items {
+        title
+        url
+        width
+        height
+      }
+    }
+  }
+`;
 
 export const MEMBER_ATTRIBUTES = `
   fragment Member on Member {

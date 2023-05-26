@@ -16,6 +16,7 @@ export async function getStaticProps() {
       photos: items.map((item) => {
         const { title, url, width, height } = item;
         return {
+          alt: title,
           src: url,
           width: width ? parseInt(width) : 0,
           height: height ? parseInt(height) : 0,

@@ -44,11 +44,17 @@ const FeaturedGuest = styled.p`
 
 const Heading = styled.h2`
   color: ${(props) => props.theme.colors.primaryLight};
-  font-size: 2rem;
+  font-size: 2.2rem;
 
   @media (max-width: ${(props) => props.theme.breakpoints.small}) {
     width: 100%;
   }
+`;
+
+const Name = styled.h2`
+  color: ${(props) => props.theme.colors.primaryLight};
+  font-family: ${(props) => props.theme.fontFamilies.base};
+  font-size: 1.8rem;
 `;
 
 export {
@@ -57,4 +63,5 @@ export {
   FeaturedGuestContainer,
   FeaturedGuest,
   Heading,
+  Name,
 };

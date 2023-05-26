@@ -16,6 +16,7 @@ const Container = styled.div`
 
 const Heading = styled.h2`
   color: ${(props) => props.theme.colors.primaryLight};
+  font-family: ${(props) => props.theme.fontFamilies.base};
   font-size: 2rem;
 `;
 
@@ -54,4 +55,8 @@ const Member = styled.div`
   }
 `;
 
-export { Container, Heading, MembersContainer, Member };
+const DateText = styled(Member)`
+  font-size: 1.2rem;
+`;
+
+export { Container, DateText, Heading, MembersContainer, Member };

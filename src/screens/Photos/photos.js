@@ -1,355 +1,64 @@
 import { useEffect, useState } from 'react';
 import Gallery from 'react-photo-gallery';
+import Image from '@/components/Image';
+import { ButtonContainer, Container, PaginationBtn, Wrapper } from './photos.styled';
 
-const photos = [
-  {
-    src: '/photos/296355920_6006118319416449_2226094069189501875_n.jpg',
-    width: 220,
-    height: 294,
-  },
-  {
-    src: '/photos/296374716_6006118009416480_7744308262609884371_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/296451009_6006118219416459_3697141438726078489_n.jpg',
-    width: 218,
-    height: 168,
-  },
-  {
-    src: '/photos/296453685_6006118086083139_7855896049943702686_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/296467814_6006118186083129_1424220265945358279_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/296477111_6006117869416494_862511933905057007_n.jpg',
-    width: 218,
-    height: 166,
-  },
-  {
-    src: '/photos/296750359_6006117886083159_7024408134624564580_n.jpg',
-    width: 216,
-    height: 161,
-  },
-  {
-    src: '/photos/299130196_6034722496556031_8664059223268837830_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/299136400_6034723429889271_2041851843205392706_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/299166564_6034723336555947_764693695763899537_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/299174448_6034722823222665_6279724264768159995_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/299229972_6034722633222684_1799767602110038156_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/299279037_6034723313222616_4835278642835996712_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/299328853_6034722786556002_32806667080408252_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/299387799_6034722483222699_7391374212210632503_n.jpg',
-    width: 280,
-    height: 210,
-  },
-  {
-    src: '/photos/299591776_6034721229889491_7490303023852826121_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/299928779_6034721769889437_1560277384050446389_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/306322366_6118700068158273_8436880695430125643_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/306362637_6118699821491631_8294134628165044403_n.jpg',
-    width: 280,
-    height: 210,
-  },
-  {
-    src: '/photos/306377730_6118699824824964_7004204427985494721_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/306395154_6118700454824901_7987506228573916577_n.jpg',
-    width: 280,
-    height: 210,
-  },
-  {
-    src: '/photos/306553952_6118700048158275_1107323301711879906_n.jpg',
-    width: 280,
-    height: 210,
-  },
-  {
-    src: '/photos/310981841_6221398194555126_2308731392526933468_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/310992329_6221398387888440_341396458929855557_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/311009679_6221398201221792_6820167662966140103_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/313004593_6237957042899241_3707441999640147632_n.jpg',
-    width: 228,
-    height: 215,
-  },
-  {
-    src: '/photos/313180981_6290232984338313_7502914243430229161_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/313419755_6290233351004943_1548407299730106539_n.jpg',
-    width: 280,
-    height: 210,
-  },
-  {
-    src: '/photos/313430015_6290233187671626_1099002634812923050_n.jpg',
-    width: 280,
-    height: 210,
-  },
-  {
-    src: '/photos/314888533_6290233231004955_5107841895874257012_n.jpg',
-    width: 280,
-    height: 210,
-  },
-  {
-    src: '/photos/314890086_6290233004338311_7954395670851418800_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/315214371_6290320200996258_5176408953128764415_n.jpg',
-    width: 222,
-    height: 480,
-  },
-  {
-    src: '/photos/315764418_6307333572628254_2672861750939830324_n.jpg',
-    width: 216,
-    height: 280,
-  },
-  {
-    src: '/photos/318837191_6367829263245351_7167088312970656053_n.jpg',
-    width: 216,
-    height: 280,
-  },
-  {
-    src: '/photos/323096606_568505065141916_8799339563415305861_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/323421344_939862867006505_4104182585529275588_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/323782013_853728945857600_4153113014180168595_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/323888479_2368137960022588_2330613241666923305_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/324302265_905190744172449_1126684734204473947_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/324465024_1283754645541238_8835582087003941271_n.jpg',
-    width: 280,
-    height: 210,
-  },
-  {
-    src: '/photos/324516005_489581119795102_4142959645355167002_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/325473690_2484406275059719_1258236568803240137_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/325994096_714037630133699_6709478508997375373_n.jpg',
-    width: 280,
-    height: 210,
-  },
-  {
-    src: '/photos/326008382_1142756796437068_2517006920314468422_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/326335144_513978464163834_6857870451120893334_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/326570710_708636097399168_205829250311490760_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/326955192_1877546885958101_3790276287970785596_n.jpg',
-    width: 210,
-    height: 315,
-  },
-  {
-    src: '/photos/329863503_5829318370498012_6617008552905495172_n.jpg',
-    width: 280,
-    height: 210,
-  },
-  {
-    src: '/photos/330204697_6066044226823745_3756039106825061846_n.jpg',
-    width: 280,
-    height: 210,
-  },
-  {
-    src: '/photos/330297925_723445766168992_6865190658759475222_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/330437191_1145371066157927_4294481271059645069_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/331420625_962928014870518_5788443462943098417_n.jpg',
-    width: 221,
-    height: 480,
-  },
-  {
-    src: '/photos/331556538_753998902619339_3335396677732802287_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/331570486_6027499907310285_5359181708128968141_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/331706354_2108384006021159_7888527444169617941_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/333958041_493073746371734_3663774618360374426_n.jpg',
-    width: 210,
-    height: 315,
-  },
-  {
-    src: '/photos/336165954_189057163887070_5664529316552711007_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/336169689_916129906363267_1111656847890255499_n.jpg',
-    width: 280,
-    height: 210,
-  },
-  {
-    src: '/photos/336186966_1176028429756009_4722206138590763066_n.jpg',
-    width: 280,
-    height: 210,
-  },
-  {
-    src: '/photos/336202490_235921405630151_9053191606576040008_n.jpg',
-    width: 280,
-    height: 210,
-  },
-  {
-    src: '/photos/336367952_263299932720322_4932114849134922235_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/336368800_544517567789641_773362016101278469_n.jpg',
-    width: 216,
-    height: 280,
-  },
-  {
-    src: '/photos/336371951_225016746776030_8625721205157973774_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/336670131_905580480719468_906083055131374220_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/336678711_136408242729041_8832065438834382066_n.jpg',
-    width: 280,
-    height: 210,
-  },
-  {
-    src: '/photos/336790076_771751824465853_1795624154480346066_n.jpg',
-    width: 210,
-    height: 280,
-  },
-  {
-    src: '/photos/342355326_561469396092066_7642329957540827601_n.jpg',
-    width: 320,
-    height: 213,
-  },
-];
-
-const reversePhotos = photos.reverse();
-
-const Photos = () => {
+const Photos = ({ photos }) => {
   // This is a workaround to prevent SSR issues with react-photo-gallery
   const [isClient, setIsClient] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [photosPerPage] = useState(20);
 
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  return <>{isClient && <Gallery photos={reversePhotos} lazyLoad={true} />}</>;
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentPage]);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const imageRenderer = ({ index, left, top, key, photo }) => (
+    <Container key={key} left={left} top={top} width={photo.width} height={photo.height}>
+      <Image
+        blurDataURL={`${photo.src}?w=10&h=10`}
+        index={index}
+        photo={photo}
+        src={photo.src}
+        alt={`Photo ${index}`}
+        width={photo.width}
+        height={photo.height}
+        layout="responsive"
+      />
+    </Container>
+  );
+
+  const indexOfLastPhoto = currentPage * photosPerPage;
+  const indexOfFirstPhoto = indexOfLastPhoto - photosPerPage;
+  const currentPhotos = photos.slice(indexOfFirstPhoto, indexOfLastPhoto);
+
+  return (
+    <Wrapper>
+      {isClient && <Gallery photos={currentPhotos} renderImage={imageRenderer} />}
+      <ButtonContainer>
+        <PaginationBtn
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+        >
+          Previous
+        </PaginationBtn>
+        <PaginationBtn
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={currentPage === Math.ceil(photos.length / photosPerPage)}
+        >
+          Next
+        </PaginationBtn>
+      </ButtonContainer>
+    </Wrapper>
+  );
 };
 
 export default Photos;

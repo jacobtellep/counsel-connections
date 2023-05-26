@@ -30,7 +30,7 @@ const Heading = styled.h1`
   color: ${(props) => props.theme.colors.white};
   display: flex;
   justify-content: center;
-  font-size: 3.6rem;
+  font-size: 4rem;
   max-width: 500px;
   padding-left: 16px;
   position: relative;

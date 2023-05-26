@@ -29,6 +29,7 @@ const Contact = styled.div`
   font-size: 1.6rem;
   max-width: 800px;
   text-align: center;
+  width: 100%;
 
   @media (max-width: ${(props) => props.theme.breakpoints.small}) {
     font-size: 1.2rem;
@@ -44,7 +45,7 @@ const ContactLink = styled(Link)`
   transition: color 0.3s;
 
   &:hover {
-    color: ${(props) => props.theme.colors.primaryLight};
+    color: ${(props) => props.theme.colors.primaryHover};
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.small}) {

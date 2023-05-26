@@ -1,9 +1,4 @@
-import {
-  Container,
-  Heading,
-  MembersContainer,
-  Member,
-} from './memberOfTheMonth.styled';
+import { Container, DateText, Heading, MembersContainer, Member } from './memberOfTheMonth.styled';
 import ContentBlock from '@/components/ContentBlock';
 import HorizontalLine from '@/components/HorizontalLine';
 
@@ -16,11 +11,9 @@ const MemberOfTheMonth = ({ contentBlock, members }) => {
           return (
             <Member key={index}>
               <Heading>{member.name}</Heading>
-              <Member>{member.date}</Member>
               {member.company}
-              {index !== members.length - 1 && (
-                <HorizontalLine height='1px' list />
-              )}
+              <DateText>{member.date}</DateText>
+              {index !== members.length - 1 && <HorizontalLine height="1px" list />}
             </Member>
           );
         })}

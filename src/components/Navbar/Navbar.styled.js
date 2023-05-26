@@ -25,7 +25,11 @@ const NavBrand = styled.a`
   padding: 0.5rem 0.5rem;
   text-decoration: none;
 
-  @media (max-width: 900px) {
+  &:hover {
+    color: ${(props) => props.theme.colors.primaryHover};
+  }
+
+  @media (max-width: 1131px) {
     font-size: 1rem;
     max-width: 200px;
   }
@@ -39,8 +43,7 @@ const NavMenu = styled.ul`
   list-style: none;
   padding: 0.5rem 0.5rem;
 
-  @media (max-width: 900px) {
-    /* align-items: center; */
+  @media (max-width: 1131px) {
     background-color: ${(props) => props.theme.colors.white};
     display: ${(props) => (props.open ? 'flex' : 'none')};
     flex-direction: column;
@@ -78,7 +81,7 @@ const NavItem = styled.li`
     top: 0;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1131px) {
     /* hide the vertical lines on mobile screens */
     &:not(:last-child)::after {
       display: none;
@@ -93,7 +96,7 @@ const NavLink = styled(Link)`
   text-decoration: none;
 
   &:hover {
-    /* color: #ccc; */
+    color: ${(props) => props.theme.colors.primaryHover};
   }
 `;
 
@@ -107,7 +110,7 @@ const HamburgerMenu = styled.div`
   top: 1rem;
   z-index: 10000;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1131px) {
     display: ${(props) => (props.open ? 'none' : 'block')};
   }
 `;
@@ -122,7 +125,7 @@ const CloseButton = styled.div`
   top: 1rem;
   z-index: 10000;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1131px) {
     display: block;
     z-index: 9999;
   }

@@ -28,6 +28,10 @@ const Publication = styled(Link)`
   max-width: 800px;
   text-align: center;
 
+  &:hover {
+    color: ${(props) => props.theme.colors.primaryHover};
+  }
+
   @media (max-width: ${(props) => props.theme.breakpoints.small}) {
     text-align: left;
   }

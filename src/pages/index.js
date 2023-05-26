@@ -48,7 +48,7 @@ export async function getStaticProps() {
           }),
           image: {
             alt: title,
-            src: replaceImageURL(image.url),
+            src: image.url,
             height: image.height ? parseInt(image.height) : 0,
             width: image.width ? parseInt(image.width) : 0,
           },

@@ -3,11 +3,11 @@ import Gallery from 'react-photo-gallery';
 import Image from '@/components/Image';
 import { Container } from './photos.styled';
 
-const Photos = (props) => {
+const Photos = ({ photos }) => {
   // This is a workaround to prevent SSR issues with react-photo-gallery
   const [isClient, setIsClient] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [photosPerPage] = useState(10); // Adjust to suit your needs
+  const [photosPerPage] = useState(10);
 
   useEffect(() => {
     setIsClient(true);
@@ -34,7 +34,7 @@ const Photos = (props) => {
 
   const indexOfLastPhoto = currentPage * photosPerPage;
   const indexOfFirstPhoto = indexOfLastPhoto - photosPerPage;
-  const currentPhotos = props.photos.slice(indexOfFirstPhoto, indexOfLastPhoto);
+  const currentPhotos = photos.slice(indexOfFirstPhoto, indexOfLastPhoto);
 
   return (
     <>
@@ -44,7 +44,7 @@ const Photos = (props) => {
       </button>
       <button
         onClick={() => handlePageChange(currentPage + 1)}
-        disabled={currentPage === Math.ceil(props.photos.length / photosPerPage)}
+        disabled={currentPage === Math.ceil(photos.length / photosPerPage)}
       >
         Next
       </button>

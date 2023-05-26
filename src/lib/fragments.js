@@ -11,6 +11,13 @@ export const ASSET_QUERY = `
   }
 `;
 
+export const FEATURED_GUEST_ATTRIBUTES = `
+  fragment FeaturedGuest on FeaturedGuest {
+    name
+    title
+  }
+`;
+
 export const MEMBER_ATTRIBUTES = `
   fragment Member on Member {
     sys {
@@ -68,7 +75,12 @@ export const WHO_WE_ARE_ATTRIBUTES = `
     }
     title
     description
-    leadershipTeam
+    leadershipTeamCollection {
+      items {
+        name
+        company
+      }
+    }
     __typename
   }
 `;
@@ -90,7 +102,11 @@ export const FEATURED_GUESTS_ATTRIBUTES = `
       id
     }
     title
-    pastFeaturedGuests
+    pastFeaturedGuestsCollection {
+      items {
+        ...FeaturedGuest
+      }
+    }
     pastPartners
     __typename
   }

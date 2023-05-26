@@ -1,12 +1,13 @@
 import Layout from '@/layout';
 import FeaturedGuests from '@/screens/FeaturedGuests';
 import Contentful from '@/lib/contentful';
-import { FEATURED_GUESTS_ATTRIBUTES } from '@/lib/fragments';
+import { FEATURED_GUESTS_ATTRIBUTES, FEATURED_GUEST_ATTRIBUTES } from '@/lib/fragments';
 
 export async function getStaticProps() {
   try {
     const query = `
-  ${FEATURED_GUESTS_ATTRIBUTES}
+    ${FEATURED_GUEST_ATTRIBUTES}
+    ${FEATURED_GUESTS_ATTRIBUTES}
     query {
       featuredGuestsCollection(limit: 1) {
         items {
@@ -18,16 +19,22 @@ export async function getStaticProps() {
 
     const { data } = await Contentful.fetch(query, {});
 
-    const { pastFeaturedGuests, pastPartners, title } = data?.featuredGuestsCollection?.items?.[0];
+    const {
+      pastFeaturedGuestsCollection: { items },
+      pastPartners,
+      title,
+    } = data?.featuredGuestsCollection?.items?.[0];
 
     const formattedProps = {
       contentBlock: {
         headingText: title,
         pageHeading: true,
       },
-      featuredGuests: pastFeaturedGuests.map((featuredGuest) => {
+      featuredGuests: items.map((featuredGuest) => {
+        const { name, title } = featuredGuest;
         return {
-          description: featuredGuest,
+          name,
+          title,
         };
       }),
       partners: pastPartners.map((partner) => {

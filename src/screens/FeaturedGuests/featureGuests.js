@@ -5,6 +5,7 @@ import {
   FeaturedGuestContainer,
   FeaturedGuest,
   Heading,
+  Name,
 } from './featuredGuests.styled';
 import ContentBlock from '@/components/ContentBlock';
 import HorizontalLine from '@/components/HorizontalLine';
@@ -14,16 +15,15 @@ const FeaturedGuests = ({ contentBlock, featuredGuests, partners }) => {
     <Container>
       <ContentBlock {...contentBlock} />
       <FeaturedGuestsContainer>
-        <Heading>Past Featured Guests</Heading>
+        <Heading>Past Guests</Heading>
         {featuredGuests.map((featuredGuest, index) => {
           return (
             <FeaturedGuestContainer key={index}>
               <FeaturedGuest>
-                {featuredGuest.description}
+                <Name>{featuredGuest.name}</Name>
+                {featuredGuest.title}
               </FeaturedGuest>
-              {index !== featuredGuests.length - 1 && (
-                <HorizontalLine height='1px' list />
-              )}
+              {index !== featuredGuests.length - 1 && <HorizontalLine height="1px" list />}
             </FeaturedGuestContainer>
           );
         })}
@@ -32,9 +32,7 @@ const FeaturedGuests = ({ contentBlock, featuredGuests, partners }) => {
           return (
             <FeaturedGuestContainer key={index}>
               <FeaturedGuest key={index}>{partner.description}</FeaturedGuest>
-              {index !== partners.length - 1 && (
-                <HorizontalLine height='1px' list />
-              )}
+              {index !== partners.length - 1 && <HorizontalLine height="1px" list />}
             </FeaturedGuestContainer>
           );
         })}

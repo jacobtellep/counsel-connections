@@ -29,7 +29,8 @@ const Description = styled.p`
 
 const Heading = styled.h2`
   color: ${(props) => props.theme.colors.primaryLight};
-  font-size: 2rem;
+  font-size: 2.2rem;
+  padding-bottom: 20px;
 
   @media (max-width: ${(props) => props.theme.breakpoints.small}) {
     padding-left: 8px;
@@ -50,11 +51,12 @@ const LeadershipContainer = styled.div`
   }
 `;
 
-const Member = styled.p`
+const Member = styled.div`
   color: ${(props) => props.theme.colors.primary};
   font-family: ${(props) => props.theme.fontFamilies.secondary};
   font-size: 1.6rem;
   max-width: 800px;
+  padding-top: 20px;
   text-align: center;
 
   @media (max-width: ${(props) => props.theme.breakpoints.small}) {
@@ -62,4 +64,10 @@ const Member = styled.p`
   }
 `;
 
-export { Container, Description, Heading, LeadershipContainer, Member };
+const Name = styled.h2`
+  color: ${(props) => props.theme.colors.primaryLight};
+  font-family: ${(props) => props.theme.fontFamilies.base};
+  font-size: 1.8rem;
+`;
+
+export { Container, Description, Heading, LeadershipContainer, Member, Name };

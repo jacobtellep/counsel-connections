@@ -19,7 +19,8 @@ const NavBrand = styled.a`
   align-items: center;
   color: ${(props) => props.theme.colors.primary};
   display: flex;
-  font-family: ${(props) => props.theme.fontFamilies.primary};
+  /* Use the base font family since the theme does not define a primary font */
+  font-family: ${(props) => props.theme.fontFamilies.base};
   font-size: 1.5rem;
   justify-content: center;
   padding: 0.5rem 0.5rem;
